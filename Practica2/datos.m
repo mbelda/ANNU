@@ -16,9 +16,16 @@
 %%% INVENTO R1%%%
 % f=@(t,x) [-9*x(1)+8*sin(t)]; intervalo=[0,2*pi]; x0 = [4]; N=1000;
 
-
 %%% FUNCION DE SOL EXACT 2 %%%
-f=@(t,x) [x(2);-2*x(1)+cos(3*t)]; intervalo = [0,10]; x0 = [1,0]; N = 100;
+% f=@(t,x) [x(2);-2*x(1)+cos(3*t)]; intervalo = [0,10]; x0 = [1,0]; N = 100;
 
+%%% PENDULO %%%
+F = 0; L = 1; m = 1; g = 9.8; T = 10;
+intervalo = [0,T]; N = 100;
+beta = 0;
+% beta = 0.25
+% beta = 1.5
+f=@(t,x) [x(2);F/(m*L) - 2*beta/m*x(1) -g/L*sin(x(2))];
+x0 = [1,0];
 
 
