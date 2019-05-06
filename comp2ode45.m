@@ -25,7 +25,7 @@ if colx>1
     for i=1:colx 
         subplot(colx,1,i)
         plot(t,x1(:,i),color(i))
-        s=sprintf('Coordenada %d de la solucion',i);
+        s=sprintf('Coordenada %d de la solucion por el primer metodo',i);
         title(s);
     end
     pause(3);
